@@ -1,5 +1,5 @@
 # Asking the user to input a choice of Rock, Paper or Scissors.
-user_option = input('Choose => Rock, Paper or Scissors => ')
+user_option = input('Choose => Rock, Paper or Scissors => ').capitalize()
 machine = 'Paper'
 
 # This is a game of Rock, Paper, Scissors. The user is asked to input a choice of Rock, Paper or
