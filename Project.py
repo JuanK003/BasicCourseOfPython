@@ -1,6 +1,17 @@
+import random
+
+options = ('Rock', 'Paper', 'Scissor')
+
 # Asking the user to input a choice of Rock, Paper or Scissors.
-user_option = input('Choose => Rock, Paper or Scissors => ').capitalize()
-machine = 'Paper'
+user_option = input('Choose => Rock, Paper or Scissor => ').capitalize()
+
+if not user_option in options:
+    print('Invalid option')
+    
+machine = random.choice(options)
+
+print('User option =>', user_option)
+print('\nComputer option =>', machine)
 
 # This is a game of Rock, Paper, Scissors. The user is asked to input a choice of Rock, Paper or
 # Scissors. The machine is set to Paper. If the user inputs the same as the machine, the user ties. If
@@ -9,22 +20,22 @@ machine = 'Paper'
 # to Paper, the user wins.
 
 if user_option == machine:
-    print('You Tied!')
+    print('\nYou Tied!')
     
 elif user_option == 'Rock':
-    if machine == 'Scissors':
-        print('You Win!')
+    if machine == 'Scissor':
+        print('\nYou Win!')
     else:
-        print('You Lost!')
+        print('\nYou Lost!')
         
 elif user_option == 'Paper':
     if machine == 'Rock':
-        print('You Win!')
+        print('\nYou Win!')
     else:
-        print('You Lost!')
+        print('\nYou Lost!')
         
-elif user_option == 'Scissors':
+elif user_option == 'Scissor':
     if machine == 'Paper':
-        print('You Win!')
+        print('\nYou Win!')
     else:
-        print('You Lost!')
+        print('\nYou Lost!')
